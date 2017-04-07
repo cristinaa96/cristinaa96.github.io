@@ -1,6 +1,9 @@
 /*////////////////////////
  THIS IS GOING TO BE APPLIED TO ALL OF THE PAGES 
 ///////////////////*/
+
+
+
 body {
 
 /*background-color: rgb(235, 250, 255);*/
@@ -11,15 +14,11 @@ padding:0;
 
 
 
-
-
-
 h1{
-	position: relative;
 	color: rgb(110, 110, 110);
-	margin-right: 4px;
 	margin-top: 0px;
-	font-size: 1.3cm;
+	font-size: 40px;
+	text-align: center;
 }
 
 h2{
@@ -46,54 +45,78 @@ h1, h2{
 }
 
 /* This will be the placeholder for creating circles unless I find a better way. */
-
-#circle {
-      width: 40px;
-      height: 40px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: lightgrey;
-      margin-left: 650px;
-      margin-top: -30px;
-      margin-bottom: 45px;
-     }
-
- #circle2 {
-      width: 40px;
-      height: 40px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: lightblue;
-      margin-left: 730px;
-      margin-top: -85px;
-      margin-bottom: 45px;
-     }
-
- #circle3{
- 	width: 40px;
-      height: 40px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: rgb(0, 134, 158);
-      margin-left: 810px;
-      margin-top: -85px;
-      margin-bottom: 45px;
-
- }
- 
+#header{
+	text-align: center;
+}
+.circle{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: -22px;
+}
+.one{
+	background: lightgrey;
+}
+.two{
+	background: lightblue;
+}
+.three{
+	background: rgb(0, 134, 158);
+}
 
 
 
+/*//////////IMAGES SETTINGS //////////////*/
 
 img{
-	padding: 0px; 
-	position: absolute;
+
+	max-width: 100%;
 	margin-left: 0px;
 	box-shadow: 12px 10px 20px #888888;
 } 
+
+
+img.large{
+	width:50%;
+	height: 570px;
+}
+img.align-left{
+	float: left;
+	margin-right:0px;
+}
+img.align-right{
+	float:right;
+	margin-left: 0px;
+
+}
+
+img.align-top{
+	float:top;
+	margin-top: 10px;
+}
+
+img.small{
+	border-radius: 25px;
+	width:150px;
+	height: 150px;
+	box-shadow: 5px 5px 5px #888888;
+}
+img.center{
+	display: inline-grid;
+	margin-top: 30px;
+	margin-left: 17.5%;
+}
+
+img.medium{
+	float: left;
+	border-radius: 25px;
+	margin-left: 15px;
+	margin-top: 10px;
+	width:400px;
+	height: 500px;
+	box-shadow: 5px 5px 5px #888888;
+}
 
 
 #nav
@@ -101,23 +124,22 @@ img{
 
 	background-color: rgb(0, 60, 88);
 	padding: 1px;
-	margin-top: -30px;
+	margin-top: 2%;
 
 }
-
+/*
 #content{
 	overflow: auto;
 	height: 100%;
 }
+*/
 
-
-  
 
 li{
 	display: inline-block;
 	padding: 0px;
 	font-size: 18px;
-	margin-left: 312px;
+	margin-left: 320px;
 }
 
 
@@ -133,7 +155,150 @@ p{
 	position: absolute;
 	margin-left: 500px;
 	text-align: center;
+}
 
+
+
+
+/*/////////////////////// MEDIA /////////////////////////*/
+
+@media screen and (max-width: 768px){
+
+#header{
+	background-color: white;
+}
+
+#nav
+{
+	background-color: rgb(0, 60, 88);
+	/*padding: 0px;*/
+	max-width: 100%;
+	top: 5%;
+	/*margin-top: 2%;*/
+}
+
+#footer{
+	max-width: 100%;
+}
+
+#label{
+	float: center;
+}
+
+li{
+
+	display: inline-block;
+	font-size: 13px;
+	/*	vertical-align: middle;*/
+	text-align: center;
+	padding-left: 25px;
+
+	margin: auto;
 
 }
 
+
+ul{
+	margin-left: 5%;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+	margin: auto;
+	white-space: nowrap;
+
+	}
+
+img{
+	padding: 0px;
+	max-width: 100%;
+	/*margin-left: 0px;*/
+	box-shadow: 12px 10px 20px #888888;
+}
+
+img.large{
+	width:100%;
+	height: 50%;
+}
+img.align-left{
+	float: left;
+	/*margin-right:10px;*/
+}
+img.align-right{
+	float:right;
+	/*margin-left: 759px;*/
+}
+
+img.align-top{
+	float:top;
+	/*margin-top: 10px;*/
+}
+
+img.medium{
+	border-radius: 25px;
+	margin-left: 2%;
+	margin-top: 2%;	
+	width:40%;
+	height: 20%;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+img.small{
+	border-radius: 25px;
+	width:75px;
+	height: 75px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+img.center{
+	display: inline-grid;
+	margin-top: 30px;
+	margin-left: 10%;
+}
+
+
+h1{
+	font-size: 26px;
+}
+
+h2{
+	color: rgb(110,110,110);
+	/*margin-top: 620px;
+	margin-left: 685px;*/
+	font-size: 28px;
+	
+}
+
+
+h3{
+	color: rgb(125,125,125);
+	font-size: 18px;
+}
+
+
+p{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	position: relative;
+	float: right;
+	margin-left: 45%;
+	margin-top: -50%;
+	text-align: left;
+}
+
+.circle{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: inline-block;
+}
+.one{
+	background: lightgrey;
+}
+.two{
+	background: lightblue;
+}
+.three{
+	background: rgb(0, 134, 158);
+}
+
+}
